@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="system/login.xhtml" x="400" y="300" zoom="true"/>
+        <Node id="index.xhtml" x="69" y="50" zoom="false"/>
+        <Node id="testmenumodel.xhtml" x="130" y="198" zoom="true"/>
+        <Node id="test1.xhtml" x="900" y="150" zoom="true"/>
+        <Node id="system/role.xhtml" x="900" y="300" zoom="true"/>
+        <Node id="userEdit.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="desktop.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="TestALTER.xhtml" x="438" y="74" zoom="true"/>
+        <Node id="system/app.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="test2.xhtml" x="400" y="450" zoom="true"/>
+        <Node id="test4.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="system/user.xhtml" x="757" y="90" zoom="true"/>
+        <Node id="template.xhtml" x="150" y="600" zoom="true"/>
+        <Node id="header.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="test3.xhtml" x="1150" y="150" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

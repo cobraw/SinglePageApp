@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/SinglePageApp">
+    <Resource auth="Container" driverClassName="com.hxtt.sql.access.AccessDriver" maxActive="20" maxIdle="10" maxWait="-1" name="mydatasource" password="" type="javax.sql.DataSource" url="jdbc:access:///E:\备课\Web开发\JSF单页面模板代码\RBAC.mdb" username=""/>
+</Context>

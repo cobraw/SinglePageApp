@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>desktop</title>
+    </h:head>
+    <h:body>
+        <h:form id="form">
+            <p:dataTable var="user" value="#{userService.users}"  editable="true"
+                         rowKey="#{user.code}"    selection="#{userService.selectUser}"     selectionMode="single"           >
+                <f:facet name="header">
+                    In-Cell Editing
+                </f:facet>
+                <p:column headerText="Model">
+                    <p:cellEditor>
+                        <f:facet name="output">
+                            <h:outputText value="#{user.code}" />
+                        </f:facet>
+                        <f:facet name="input">
+                            <p:inputText value="#{user.code}"/>
+                        </f:facet>
+                    </p:cellEditor>
+                </p:column>
+                //more columns with cell editors
+                <p:column width="2%">
+                    <p:rowEditor editTitle="编辑" saveTitle="保存" cancelTitle="放弃" />                     
+                </p:column>
+                <p:column width="3%">                    
+                    <h:commandButton  value="OK"  actionListener="#{userService.setSelectUser(user)}"  />
+                </p:column>
+            </p:dataTable>
+            <h:outputText value="#{userService.selectUser}"/>
+        </h:form>
+        <h:form id="frm">
+            <p:dataTable var="customer" value="#{alter.customers}"  editable="true"
+                         rowKey="#{customer.customerID}"                          
+                         >   
+                <p:column  selectionMode="single"  />   
+                <p:column style="width:6%">  
+                    <p:rowEditor />  
+                </p:column>  
+                <p:column headerText="员工编号" sortBy="#{customer.customerID}">
+                    <p:cellEditor>
+                        <f:facet name="output">
+                            <h:outputText value="#{customer.customerID}"/>
+                        </f:facet>   
+                        <f:facet name="input">
+                            <p:inputText value="#{customer.customerID}"/>
+                        </f:facet>
+                    </p:cellEditor>
+                </p:column>
+                <p:column headerText="员工姓名" sortBy="#{customer.customerName}">
+                    <p:cellEditor>
+                        <f:facet name="output">
+                            <h:outputText value="#{customer.customerName}"/>
+                        </f:facet>   
+                        <f:facet name="input">
+                            <p:inputText value="#{customer.customerName}"/>
+                        </f:facet>
+                    </p:cellEditor>
+                </p:column>
+                <p:column>
+                    <h:commandButton  value="OK"  action="#{alter.setSelectitem(customer)}"  />
+                </p:column>
+            </p:dataTable>
+            <h:outputLabel id="select" value="#{alter.selectitem.customerName}"/>
+        </h:form>
+    </h:body>
+</html>
+
